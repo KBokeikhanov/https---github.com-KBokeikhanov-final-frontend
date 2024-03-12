@@ -1,0 +1,123 @@
+/* Общие стили */
+
+body {
+  font-family: Impact, Charcoal, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Стили для заголовка */
+
+header {
+  background: linear-gradient(135deg, #000000, #B30D23);
+  color: #FFFFFF; 
+  padding: 20px 0;
+}
+
+
+
+.title {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+
+/* Стили для основного контента */
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: calc(50% - 20px);
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #FFFFFF; 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px; 
+}
+
+.product h2 {
+  margin: 0;
+  font-size: 18px; 
+}
+
+.product p {
+  margin-bottom: 10px; 
+  font-size: 14px;
+}
+
+.button {
+  background-color: #FFD700;
+  color: #FFFFFF; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #C0C0C0; 
+}
+
+/* Стили для футера */
+
+footer {
+  background: linear-gradient(135deg, #B30D23, #000000); /* Градиент от красного к черному */
+  color: #FFFFFF; 
+  padding: 20px 0;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Стили для Swiper */
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden; 
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.product img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+
+body {
+  background-image: url("/images/ball3.jpeg"); 
+  background-size: cover; 
+  background-position: center; 
+}
+
+/* Адаптивные стили */
+
+@media screen and (max-width: 768px) {
+  .product {
+    width: 100%;
+  }
+}

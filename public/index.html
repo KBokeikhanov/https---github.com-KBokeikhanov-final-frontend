@@ -1,17 +1,247 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Jordan Store</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Стили для изменения размеров изображений */
+        .product img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Гридовая верстка */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .header-container,
+.footer-container {
+    background: linear-gradient(135deg, #c30000, #000000);
+    color: #FFFFFF; 
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+        .menu-container {
+            background: linear-gradient(135deg, #000000, #B30D23);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin-bottom: 5px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            }
+
+        .menu a:hover {
+        color: #ffcc00;
+        }
+
+
+        /* Установка размеров для Swiper */
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .product img {
+            max-height: 200px; 
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-container">
+        <h1 class="title">Air Jordan Store</h1>
+    </div>
+
+    <nav class="menu-container container">
+        <ul class="menu">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#products">Продукты</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#terms">Условия использования</a></li>
+        </ul>
+    </nav>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="product">
+                    <img src="/images/jd1.jpg" alt="Air Jordan 1">
+                    <h2 class="product-name">Air Jordan 1</h2>
+                    <p class="product-description"></p>
+                    <button class="button">Добавить в корзину</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd2.jpg" alt="Air Jordan 2">
+                        <h2 class="product-name">Air Jordan 2</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd3.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 3</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd4.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 4</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd5.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 5</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd6.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 6</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd7.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 7</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd8.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 8</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd9.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 9</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd10.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 10</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/images/jd11.jpg" alt="Air Jordan 3">
+                        <h2 class="product-name">Air Jordan 11</h2>
+                        <p class="product-description"></p>
+                        <button class="button">Добавить в корзину</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <footer class="footer-container">
+        <p>&copy; 2024 Air Jordan Store. Все права защищены.</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
+    </script>
+    <script src="/js/script.js">
+
+    </script>
+</body>
+
 </html>
